@@ -1,5 +1,4 @@
 from contextBot.CommandHandler import CommandHandler
-import StringIO
 import asyncio
 
 cmds = CommandHandler()
