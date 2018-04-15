@@ -1,4 +1,6 @@
 from contextBot.CommandHandler import CommandHandler
+import StringIO
+import asyncio
 
 cmds = CommandHandler()
 
@@ -6,7 +8,7 @@ cmds = CommandHandler()
 async def cmd_ping(ctx):
     """
     Usage:
-        {prefix}ping 
+        {prefix}ping
     Description:
         Pings the bot.
     """
@@ -30,3 +32,15 @@ async def cmd_eval(ctx):
                     \n```py\n{}\n```".format(ctx.arg_str,
                                              "error" if error else "",
                                              output))
+
+async def _eval(ctx):
+    output = None
+    try:
+        output = eval(ctx.arg_str)
+    except Exception:
+        await ctx.bot.log(str(traceback.format_exc()))
+        return (str(traceback.format_exc()), 1)
+    if asyncio.iscoroutine(output):
+        output = await output
+    return (output, 0)
+
