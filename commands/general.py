@@ -1,5 +1,6 @@
 from contextBot.CommandHandler import CommandHandler
 import asyncio
+import traceback
 
 cmds = CommandHandler()
 
