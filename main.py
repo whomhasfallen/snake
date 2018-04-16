@@ -35,6 +35,8 @@ async def on_ready():
     bot.sync_log(bot.user.name)
     bot.sync_log(bot.user.id)
     bot.sync_log("Logged into {} servers".format(len(bot.servers)))
+    # await client.change_presence(game=discord.Game(name="name", type=0-3))
+    await bot.change_presence(game=discord.Game(name="Snaking around 🐍"))
 
 # ----Event loops----
 # ----End event loops----
