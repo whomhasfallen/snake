@@ -37,7 +37,7 @@ async def cmd_eval(ctx):
 async def cmd_kick(ctx):
     """
     Usage:
-        {prefix}kick [@member] [type your reason or say 'None' for no reason]
+        {prefix}kick [@member|ID] [type your reason or say 'None' for no reason]
     Description:
         Kicks a member.
     """
