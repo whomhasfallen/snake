@@ -22,6 +22,8 @@ async def cmd_eval(ctx):
     Description:
         Runs <code> in current environment using eval() and prints the output or error.
     """
+    if not ctx.authid in bot.objects["exec_whitelist"]:
+        return
     if ctx.arg_str == "":
         await ctx.reply("You must give me something to run!")
         return
@@ -42,7 +44,7 @@ async def cmd_kick(ctx):
         Kicks a member.
     """
     await ctx.reply("If you're reading this, the kick command is a work in progress and will be finished soon.")
-    
+
 @cmds.cmd("ban")
 async def cmd_ban(ctx):
     """

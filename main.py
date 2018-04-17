@@ -19,6 +19,8 @@ bot = Bot(data=None,
           bot_conf=conf,
           prefix=PREFIX)
 
+bot.objects["exec_whitelist"] = ["300992784020668416", "299175087389802496", "260246864979296256"]
+
 bot.DEBUG = 1
 
 
