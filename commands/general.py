@@ -42,6 +42,16 @@ async def cmd_kick(ctx):
         Kicks a member.
     """
     await ctx.reply("If you're reading this, the kick command is a work in progress and will be finished soon.")
+    
+@cmds.cmd("ban")
+async def cmd_ban(ctx):
+    """
+    Usage:
+        {prefix}ban [@member|ID] [type your reason or say 'None' for no reason]
+    Description:
+        Bans a member.
+    """
+    await ctx.reply("If you're reading this, the ban command is a work in progress and will be finished soon.")
 
 async def _eval(ctx):
     output = None
