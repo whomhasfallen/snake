@@ -7,7 +7,7 @@ from botconf import Conf
 
 # Global constants/ environment variables
 
-CONF_FILE = "pytest.conf"
+CONF_FILE = "snake.conf"
 
 # Initialise
 
