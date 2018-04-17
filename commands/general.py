@@ -12,7 +12,7 @@ async def cmd_ping(ctx):
     Description:
         Pings the bot.
     """
-    await ctx.reply('Pong!')
+    await ctx.reply("Pong!")
 
 @cmds.cmd("eval")
 async def cmd_eval(ctx):
@@ -41,6 +41,7 @@ async def cmd_kick(ctx):
     Description:
         Kicks a member.
     """
+    await ctx.reply("If you're reading this, the kick command is a work in progress and will be finished soon.")
 
 async def _eval(ctx):
     output = None
