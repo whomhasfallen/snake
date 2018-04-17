@@ -22,7 +22,7 @@ async def cmd_eval(ctx):
     Description:
         Runs <code> in current environment using eval() and prints the output or error.
     """
-    if not ctx.authid in bot.objects["exec_whitelist"]:
+    if not ctx.authid in ctx.bot.objects["exec_whitelist"]:
         return
     if ctx.arg_str == "":
         await ctx.reply("You must give me something to run!")
