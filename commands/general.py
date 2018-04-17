@@ -33,6 +33,15 @@ async def cmd_eval(ctx):
                                              "error" if error else "",
                                              output))
 
+@cmds.cmd("kick")
+async def cmd_kick(ctx):
+    """
+    Usage:
+        {prefix}kick [@member] [type your reason or say 'None' for no reason]
+    Description:
+        Kicks a member.
+    """
+
 async def _eval(ctx):
     output = None
     try:
@@ -43,4 +52,3 @@ async def _eval(ctx):
     if asyncio.iscoroutine(output):
         output = await output
     return (output, 0)
-
