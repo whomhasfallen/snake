@@ -5,11 +5,11 @@ from contextBot.Bot import Bot
 
 from botconf import Conf
 
-# Global constants/ environment variables
+# Global constants/environment variables
 
 CONF_FILE = "snake.conf"
 
-# Initialise
+# Init
 
 conf = Conf(CONF_FILE)
 
@@ -24,12 +24,12 @@ bot.objects["exec_whitelist"] = ["300992784020668416", "299175087389802496", "26
 bot.DEBUG = 1
 
 
-# Loading and initial objects
+# Loading commands and objects
 
 bot.load("commands", ignore=["__pycache__"])
 
-# ----Discord event handling----
 
+# Event handling
 
 @bot.event
 async def on_ready():
@@ -40,8 +40,8 @@ async def on_ready():
     # await client.change_presence(game=discord.Game(name="name", type=0-3))
     await bot.change_presence(game=discord.Game(name="Snaking around 🐍"))
 
-# ----Event loops----
-# ----End event loops----
+# --- Event loops --- 
+# --- End event loops ---
 
-# ----Everything is defined, start the bot!----
+# --- Everything is defined, start the bot! ---
 bot.run(conf.get("TOKEN"))
